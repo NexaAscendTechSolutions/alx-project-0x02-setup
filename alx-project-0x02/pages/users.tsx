@@ -19,11 +19,12 @@ export default function UsersPage({ users }: UsersPageProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps<UsersPageProps> = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const users: UserProps[] = await res.json();
+export const getStaticProps: GetStaticProps<UsersPageProps> =
+  async function getStaticProps() {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const users: UserProps[] = await res.json();
 
-  return {
-    props: { users },
+    return {
+      props: { users },
+    };
   };
-};
