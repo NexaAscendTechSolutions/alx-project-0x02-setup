@@ -1,4 +1,3 @@
-// components/Header.tsx
 import Link from "next/link";
 
 export default function Header() {
@@ -12,16 +11,11 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="flex gap-6">
-          <Link href="/" className="hover:text-gray-300 transition-colors">
+          <Link href="/home" className="hover:text-gray-300 transition-colors">
             Home
           </Link>
           <Link href="/about" className="hover:text-gray-300 transition-colors">
             About
-          </Link>
-          <Link
-            href="/contact"
-            className="hover:text-gray-300 transition-colors">
-            Contact
           </Link>
         </nav>
       </div>
