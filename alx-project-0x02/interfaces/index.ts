@@ -12,3 +12,12 @@ export interface ButtonProps {
   shape?: "rounded-sm" | "rounded-md" | "rounded-full";
   onClick?: () => void;
 }
+export interface UserProps {
+  id: number;
+  name: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+  };
+}
